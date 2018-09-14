@@ -5,7 +5,7 @@ public class Die
 
 	public Die()
 	{
-		// CrapsGame.println("Die's constructor called.");
+		CrapsGame.println("Die's constructor called.");
 		this.roll();
 	}
 

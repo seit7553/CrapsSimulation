@@ -1,4 +1,4 @@
-// foo again
+
 public class CrapsGame
 {
 	private int point;
@@ -38,13 +38,14 @@ public class CrapsGame
 		{
 			return winForPlayer(wins, steps);
 		}
+		
+		// Else if point is 2, 3, or 12, announce an immediate loss for player,
+		// increment losses[steps], and return false indicating loss
+		
 		else if (point==2 || point == 3 || point==12)
 		{
 			return lossForPlayer(losses, steps);
 		}
-
-		// Else if point is 2, 3, or 12, announce an immediate loss for player,
-		// increment losses[steps], and return false indicating loss
 
 		// If not an immediate win nor loss, print out point
 		// roll the dice over and over, keeping track of steps,

@@ -52,8 +52,8 @@ public class PlayWithInheritance
 		}
 		else if (RUN_EXAMPLE == 4)
 		{
-			// Die alias = die1; // try replacing this line with either below
-			Die alias = crooked1; // upcasting!
+			Die alias = aSingleDie; // try replacing this line with either below
+			// Die alias = crooked1; // upcasting!
 			// Die alias = crooked2; // ditto
 
 			StdOut.println("alias's toString(): '" + alias.toString() + "'");
@@ -76,7 +76,7 @@ public class PlayWithInheritance
 			// of alias in the following call?
 			// No => dynamic runtime lookup happens
 
-			describe("Which toString() is called? Answer is: ", alias);
+			StdOut.println ("toString() returns:" + describe(alias));
 		}
 		else if (RUN_EXAMPLE == 6)
 		{
@@ -96,15 +96,14 @@ public class PlayWithInheritance
 
 	/**
 	 * Shows polymorphism via passing either Die ref as toDescribe, or
-	 * CrookedDie1 or CrookedDie2 ref instead
+	 * CrookedDie1 or CrookedDie2 (upcast to Die) ref instead
 	 * 
-	 * @param msg
 	 * @param toDescribe
 	 */
 
-	public static void describe(String msg, Die toDescribe)
+	public static String describe(Die toDescribe)
 	{
-		StdOut.printf("%s '%s' \n", msg, toDescribe.toString());
+		return toDescribe.toString();
 	}
 
 }
