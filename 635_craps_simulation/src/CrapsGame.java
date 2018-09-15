@@ -1,4 +1,4 @@
-
+//my first comment
 public class CrapsGame
 {
 	private int point;
